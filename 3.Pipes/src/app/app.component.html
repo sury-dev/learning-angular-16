@@ -1,0 +1,9 @@
+<h1>{{ title | uppercase }}</h1>
+<h2>Todays date is (unformatted) :{{ today }}</h2>
+<h2>Todays date is (formatted) :{{ today | date}}</h2>
+<h2>Todays date is (formatted 2) :{{ today | date : "fullDate"}}</h2>
+<h2>Todays date is (formatted 2) :{{ today | date : "hh:mm:ss"}}</h2>
+<p>{{ currency | currency }}</p>
+<p>{{ currency | currency : "INR" : "symbol" : "2.1-6"}}</p>
+<p>{{ 0.45 | percent }}</p>
+<p>{{"ABCD " | append : "hkjhgjhkjg"}}</p>
