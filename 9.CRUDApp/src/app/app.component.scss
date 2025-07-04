@@ -1,0 +1,38 @@
+// ==== LOCAL SCSS VARIABLES ====
+$bg-color: #1e1e2f;
+$header-bg: #2c2c44;
+$text-color: #ffffff;
+$title-color: #e5e5f5;
+$shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+$font-size-title: 2rem;
+$spacing: 2rem;
+
+// ==== LAYOUT STYLES ====
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-color;
+
+  &__header {
+    background-color: $header-bg;
+    padding: 1.25rem 1rem;
+    box-shadow: $shadow;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: $font-size-title;
+    font-weight: 700;
+    color: $title-color;
+  }
+
+  &__main {
+    flex: 1;
+    padding: $spacing 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing;
+    align-items: center;
+  }
+}

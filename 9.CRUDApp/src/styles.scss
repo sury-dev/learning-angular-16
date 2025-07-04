@@ -1,0 +1,121 @@
+/* You can add global styles to this file, and also import other style files */
+// ========== VARIABLES ==========
+$font-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$base-font-size: 16px;
+$text-color: #1a1a1a;
+$bg-color: #f9f9fb;
+$card-bg: #fff;
+$shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+$shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+$radius: 8px;
+
+// ========== RESET ==========
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: $font-stack;
+    font-size: $base-font-size;
+    line-height: 1.5;
+    color: $text-color;
+    background-color: $bg-color;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+// ========== LAYOUT ==========
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+// ========== TYPOGRAPHY ==========
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 600;
+    color: #111;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// ========== UTILITIES ==========
+.spacing-sm {
+    margin-bottom: 0.5rem;
+}
+
+.spacing-md {
+    margin-bottom: 1rem;
+}
+
+.spacing-lg {
+    margin-bottom: 2rem;
+}
+
+// ========== COMPONENT HELPERS ==========
+.card {
+    background-color: $card-bg;
+    border-radius: $radius;
+    padding: 1rem;
+    box-shadow: $shadow;
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+        box-shadow: $shadow-hover;
+    }
+}
+
+// ========== SCROLLBAR ==========
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}

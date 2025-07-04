@@ -1,0 +1,80 @@
+// ==== LOCAL SCSS VARIABLES ====
+$card-bg: #2a2a40;
+$text-color: #e5e5f5;
+$title-color: #ffffff;
+$body-color: #d0d0e0;
+$edit-color: #5a9fd4;
+$delete-color: #f25f5c;
+$radius: 8px;
+$shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+$gap: 1.5rem;
+
+// ==== COMPONENT STYLES ====
+.note-list {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    width: 100%;
+    max-width: calc(500px + 1.5rem);
+    margin: 0 auto;
+    width: calc(50vw);
+
+    &__item {
+        background-color: $card-bg;
+        border-radius: $radius;
+        padding: 1rem 1.25rem;
+        box-shadow: $shadow;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $title-color;
+        margin-bottom: 0.5rem;
+    }
+
+    &__body {
+        font-size: 1rem;
+        color: $body-color;
+    }
+
+    &__actions {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    &__btn {
+        padding: 0.4rem 0.8rem;
+        border-radius: $radius;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #fff;
+        transition: background-color 0.2s ease;
+
+        &--edit {
+            background-color: $edit-color;
+
+            &:hover {
+                background-color: lighten($edit-color, 5%);
+            }
+        }
+
+        &--delete {
+            background-color: $delete-color;
+
+            &:hover {
+                background-color: lighten($delete-color, 5%);
+            }
+        }
+    }
+}

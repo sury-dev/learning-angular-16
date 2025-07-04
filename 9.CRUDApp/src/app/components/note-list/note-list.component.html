@@ -1,0 +1,13 @@
+<div class="note-list">
+    <div *ngFor="let note of notes" class="note-list__item card">
+        <div class="note-list__content">
+            <h2 class="note-list__title">{{ note.title }}</h2>
+            <p class="note-list__body">{{ note.content }}</p>
+        </div>
+
+        <div class="note-list__actions">
+            <button class="note-list__btn note-list__btn--edit" (click)="editNote(note)">Edit</button>
+            <button class="note-list__btn note-list__btn--delete" (click)="deleteNote(note.id)">Delete</button>
+        </div>
+    </div>
+</div>
